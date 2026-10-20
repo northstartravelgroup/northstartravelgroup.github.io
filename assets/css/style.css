@@ -569,6 +569,7 @@ body.menu-open .menu a.menu-link { opacity: 1; transform: translateY(0); }
 /* forms */
 .form { display: grid; gap: 1.1rem; }
 .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; }
+.fields-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: end; }
 .field { display: grid; gap: 0.45rem; }
 .field.full { grid-column: 1 / -1; }
 .field label { font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
@@ -600,6 +601,9 @@ body.menu-open .menu a.menu-link { opacity: 1; transform: translateY(0); }
 
 /* misc bits */
 .split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.split-book { grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr); align-items: start; }
+.terms-split { display: grid; grid-template-columns: minmax(0, 0.28fr) minmax(0, 0.72fr); gap: 3rem; }
+.terms-toc { position: sticky; top: 7rem; align-self: start; }
 .stack-list { display: grid; gap: 1.4rem; }
 .stack-list .row { display: grid; grid-template-columns: auto 1fr; gap: 1.2rem; align-items: start; padding-bottom: 1.4rem; border-bottom: 1px solid var(--line-soft); }
 .stack-list .row:last-child { border-bottom: 0; padding-bottom: 0; }
@@ -774,6 +778,9 @@ tr:last-child td { border-bottom: 0; }
 
 @media (max-width: 900px) {
   .hero-inner, .head-split, .split, .menu-grid { grid-template-columns: 1fr; }
+  .fields-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .terms-split { grid-template-columns: 1fr; gap: 2rem; }
+  .terms-toc { position: static; }
   /* on short screens the menu is taller than the viewport — anchor it to the top so nothing clips */
   .menu { align-content: start; padding: 7.5rem 8vw 4rem; }
   .menu a.menu-link { font-size: clamp(1.5rem, 6.5vw, 2.1rem); line-height: 1.42; }
