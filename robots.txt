@@ -1,0 +1,7 @@
+# Preview build — not for indexing until client content is final.
+# When going live, replace this file with:
+#   User-agent: *
+#   Allow: /
+#   Sitemap: https://<domain>/sitemap.xml
+User-agent: *
+Disallow: /
